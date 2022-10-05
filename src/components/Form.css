@@ -1,0 +1,156 @@
+.container {
+  /* height: 100vh; */
+  background-color: #e3d6dd;
+}
+.form-nav {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 3rem;
+
+  margin-bottom: 2rem;
+}
+.form-nav-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.back-arrow img {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #b0afae;
+  padding: 0.9rem 1.1rem;
+  border-radius: 5px;
+  background-color: #fcfbf9;
+  height: 3.5rem;
+}
+.nav-header {
+  font-size: 1.8rem;
+}
+.description {
+  font-size: 1.6rem;
+  width: 60%;
+}
+.bold {
+  font-weight: 700;
+}
+.form-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 7rem;
+  padding-bottom: 4rem;
+}
+.form-container-left {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form-container-right {
+  background-color: #fcfbf9;
+  border-radius: 9px;
+}
+.form-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  margin-left: 10rem;
+}
+.form-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.input {
+  border: 1px solid #b0afae;
+  font-family: inherit;
+  width: 69%;
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+.checkbox {
+  margin-bottom: 0;
+}
+.create-account-description {
+  font-size: 1.5rem;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.terms {
+  color: #6151f5;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.submit-button {
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  background-color: #6151f5;
+  color: #fcfbf9;
+  padding: 1rem 3rem;
+  width: 69%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 59em) {
+  .container {
+    padding-top: 2rem;
+    padding-left: 7rem;
+  }
+  .form-nav {
+    margin-right: 5rem;
+  }
+  .description {
+    font-size: 1.6rem;
+    width: 80%;
+  }
+  .form-container {
+    grid-template-columns: 1fr;
+    /* max-width: 50rem; */
+    row-gap: 4rem;
+  }
+
+  .form-container-right {
+    width: 76%;
+    display: grid;
+    justify-items: center;
+    width: 80%;
+    /* margin-left: 6rem; */
+  }
+}
+@media screen and (max-width: 34em) {
+  .nav-header {
+    display: none;
+  }
+  .form-heading {
+    margin-right: 3rem;
+    margin-left: -8rem;
+  }
+  .create-account-description {
+    width: 70%;
+  }
+  .form-wrapper {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding-left: 1rem;
+  }
+  /* .input {
+    width: 50%;
+  } */
+  /* .submit-button {
+    width: 50%;
+  } */
+}

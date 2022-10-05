@@ -1,0 +1,67 @@
+.hero-section {
+  padding-top: 7rem;
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4.8rem;
+}
+.left-section {
+  padding-top: 4rem;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.hero-description {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+.user-avatars {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-closing-paragraph {
+  font-size: 1.6rem;
+  color: #777;
+}
+.paragraph-span {
+  color: #6151f5;
+  font-weight: 700;
+}
+.right-section img {
+  width: 100%;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 59em) {
+  .hero-section {
+    padding: 0 3rem;
+    grid-template-columns: 1fr;
+  }
+  .right-section {
+    grid-row: 1;
+    display: grid;
+    justify-items: center;
+  }
+  .right-section img {
+    width: 50%;
+  }
+  .heading-primary {
+    width: 80%;
+  }
+  .hero-description {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .heading-primary {
+    width: 100%;
+  }
+  .right-section img {
+    margin-top: 3rem;
+    width: 70%;
+  }
+}

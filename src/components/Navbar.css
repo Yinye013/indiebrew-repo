@@ -1,0 +1,80 @@
+.nav-component {
+  display: flex;
+  justify-content: space-between;
+  max-width: 114rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  position: relative;
+}
+nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.nav-links:link,
+.nav-links:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #1e1e1e;
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 59em) {
+  .nav-component {
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 34em) {
+  .nav-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-list {
+    /* when open is false, this should happen */
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-open {
+    /* when open is true, this should show */
+    opacity: 1;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    top: 9rem;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    /* jkopjiojn */
+  }
+}
