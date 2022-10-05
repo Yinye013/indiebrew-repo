@@ -18,8 +18,8 @@ const Form = () => {
       </div>
       <div className="form-container">
         <div className="form-container-left">
-          <h2 className="heading-secondary">
-            Create your personalized <br /> feed.
+          <h2 className="form-heading-secondary">
+            Create your personalized feed.
           </h2>
           <p className="description">
             🎈<span className="bold">Over 20 resources.</span>With resources

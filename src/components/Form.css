@@ -36,6 +36,10 @@
 .bold {
   font-weight: 700;
 }
+.form-heading-secondary {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
 .form-container {
   max-width: 114rem;
   margin: 0 auto;
@@ -137,6 +141,7 @@ label {
   .form-heading {
     margin-right: 3rem;
     margin-left: -8rem;
+    width: 60%;
   }
   .create-account-description {
     width: 70%;
@@ -147,10 +152,18 @@ label {
     justify-items: center;
     padding-left: 1rem;
   }
+  .description {
+    margin-bottom: 1rem;
+  }
   /* .input {
     width: 50%;
   } */
   /* .submit-button {
     width: 50%;
   } */
+  .form-heading-secondary {
+    font-size: 3.6rem;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
 }
