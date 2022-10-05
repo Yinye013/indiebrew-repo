@@ -161,6 +161,9 @@ label {
   /* .submit-button {
     width: 50%;
   } */
+  .form-wrapper {
+    margin-left: 8.5rem;
+  }
   .form-heading-secondary {
     font-size: 3.6rem;
     width: 80%;
