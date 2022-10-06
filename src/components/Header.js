@@ -8,7 +8,6 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);
-    console.log("clicked");
   };
   return (
     <div className="header">
