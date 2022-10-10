@@ -1,10 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import indieBrew from "../images/Logo.svg";
 import BackArrow from "../images/Back Arrow.svg";
 import "./Form.css";
 import { Link } from "react-router-dom";
 
-const Form = () => {
+const Form = (props) => {
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredName, setEnteredName] = useState("");
+  const [checkedBox, setCheckedBox] = useState(false);
+  const [enteredPassword, setEnteredPassword] = useState("");
+
+  const emailHandler = (e) => {
+    setEnteredEmail(e.target.value);
+    //when using state that depends on the previous state, pass in a function
+    // (previousState) => {
+    //   return {
+    //     ...previousState,
+    //     enteredName: e.target.value
+    //   }
+    // })
+  };
+  const nameHandler = (e) => {
+    setEnteredName(e.target.value);
+    console.log(e.target);
+  };
+  const passwordHandler = (e) => {
+    setEnteredPassword(e.target.value);
+  };
+  const checkboxHandler = (e) => {
+    setCheckedBox(e.target.checked);
+  };
+  const submitHandler = function (e) {
+    e.preventDefault();
+    console.log("Submitted ");
+
+    //since the state isn't combined into an object, I'll create the object here
+    // name the key anything you want but the values have to be the state variables!
+    let enteredData = {
+      email: enteredEmail,
+      name: enteredName,
+      checked: checkedBox,
+      password: enteredPassword,
+    };
+    props.onSaveData(enteredData);
+    setEnteredEmail("");
+    setEnteredName("");
+    setCheckedBox(!checkedBox);
+    setEnteredPassword("");
+  };
+
+  // JSX Body
   return (
     <div className="container">
       <div className="form-nav">
@@ -40,25 +85,40 @@ const Form = () => {
         <div className="form-container-right">
           <div className="form-wrapper">
             <h3 className="form-heading">Create your IndieBrew Account</h3>
-            <form className="indiebrew-form">
-              <label for="Email">Email</label>
+            <form className="indiebrew-form" onSubmit={submitHandler}>
+              <label htmlFor="Email">Email</label>
               <input
                 className="input"
                 type="email"
                 placeholder="john@example.com"
+                value={enteredEmail}
+                onChange={emailHandler}
               />
-              <label for="Name">Name</label>
-              <input className="input" type="text" placeholder="John Doe" />
-              <label for="Password">Password</label>
+              <label htmlFor="Name">Name</label>
+              <input
+                className="input"
+                type="text"
+                placeholder="John Doe"
+                value={enteredName}
+                onChange={nameHandler}
+              />
+              <label htmlFor="Password">Password</label>
               <input
                 className="input"
                 type="password"
                 placeholder="At least 8 characters"
+                value={enteredPassword}
+                onChange={passwordHandler}
               />
 
               <p className="create-account-description">
-                <input type="checkbox" className="checkbox" /> By creating an
-                account on IndieBrew, you agree to the{" "}
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  value={checkedBox}
+                  onChange={checkboxHandler}
+                />{" "}
+                By creating an account on IndieBrew, you agree to the{" "}
                 <span className="terms">Terms & Conditions.</span>{" "}
               </p>
               <button className="submit-button">Create an Account</button>
