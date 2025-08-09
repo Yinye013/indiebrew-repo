@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4.8rem;
+  height: 80vh;
 }
 .left-section {
   padding-top: 4rem;
@@ -39,6 +40,7 @@
   .hero-section {
     padding: 0 3rem;
     grid-template-columns: 1fr;
+    height: 90vh;
   }
   .right-section {
     grid-row: 1;

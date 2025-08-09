@@ -1,5 +1,5 @@
 .container {
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #e3d6dd;
 }
 .form-nav {
@@ -112,6 +112,7 @@ label {
   .container {
     padding-top: 2rem;
     padding-left: 7rem;
+    height: 140vh;
   }
   .form-nav {
     margin-right: 5rem;
